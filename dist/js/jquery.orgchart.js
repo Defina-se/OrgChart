@@ -459,7 +459,13 @@
       }
       if (isInAction($node)) {
         switchVerticalArrow($node.children('.bottomEdge'));
+
       }
+	setTimeout(function() {
+		$($node).trigger('hiddenChildren', {
+			node: $node
+		});
+	})
     });
   }
 
